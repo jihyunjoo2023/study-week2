@@ -1,16 +1,76 @@
 .app-style {
-  padding: 100px;
+  padding: 20px;
   display: flex;
+  flex-wrap: wrap;
+  /*초과한 후 가로로 정렬 */
   gap: 12px;
 }
 
-.component-style {
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  width: 100px;
-  height: 100px;
-  border: 1px solid green;
+.todoContainer {
+  width: 1200px;
+}
+
+.component-style {
+  width: 300px;
+  height: 200px;
+  border: 5px solid green;
   border-radius: 10px;
   display: flex;
+  /*flex 박스는 자식요소 가로로 정렬*/
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.parent {
+  display: flex;
+  width: auto;
+  height: 50px;
+  border: 1px solid gray;
+  align-items: center;
+  background-color: white;
+}
+
+.left,
+.right {
+  margin: 0 1rem;
+}
+
+.right {
+  margin-left: auto;
+}
+
+
+
+.middleBox {
+  display: flex;
+  /*보이는 가로 길이의 100퍼센트 = 100vw 세로길의 비율 = 10vh */
+  width: 1200px;
+  height: 10vh;
+  border: 1px solid rgb(148, 186, 255);
+  background-color: rgb(148, 186, 255);
+  align-items: center;
+  justify-content: center;
+}
+
+.titleBox {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.contentBox {
+  margin-bottom: 20px;
+}
+
+.buttonBox {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
 }
