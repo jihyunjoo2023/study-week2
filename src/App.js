@@ -59,7 +59,6 @@ const App = () => {
   };
 
 
-
   return (
     <div className="container">
       <div className="todoContainer">
@@ -84,7 +83,7 @@ const App = () => {
               item={item}
               clickRemoveButtonHandler={clickRemoveButtonHandler}
               clickDoneButtonHandler={clickDoneButtonHandler}
-              btntitle="완료"
+
             />;
           })}
 
