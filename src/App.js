@@ -54,7 +54,7 @@ const App = () => {
   const clickDoneButtonHandler = (id) => {
     const updateTools = users.map((user) =>
       user.id === id ? { ...user, state: !user.state } : user
-    );
+    );//물음표 앞 값 true 같으면 앞 틀리면 뒤에 것
     setUsers(updateTools); // 불변객체 유지 
   };
 
@@ -120,7 +120,7 @@ const User = ({ item, clickRemoveButtonHandler, clickDoneButtonHandler }) => {
       <div className="contentBox">{item.content}</div>
       <div className="buttonBox">
         <button onClick={() => clickRemoveButtonHandler(item.id)}>삭제하기</button>
-        <button onClick={() => clickDoneButtonHandler(item.id)}>완료</button>
+        <button onClick={() => clickDoneButtonHandler(item.id)}>{item.state ? "취소" : "완료"}</button>
       </div>
 
     </div>
