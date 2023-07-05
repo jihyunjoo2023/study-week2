@@ -6,14 +6,13 @@ import { Link } from "react-router-dom";
 
 function Detail() {
   const { todo } = useSelector((state) => state.todo);
-  const { id } = useParams();
-  const writeTodo = todo.find((todoItem) => todoItem.id === id);
-
+  const { id } = useParams();  // 문자열이 와요 
+  const writeTodo = todo.find((todoItem) => todoItem.id === +id); // 숫자와 문자를 비교히나까. 
   return (
     <StLayout>
-      <StTodoItem key={writeTodo.id}>
+      <StTodoItem>
         <StNav>
-          <div>id: {writeTodo}</div>
+          <div>id: {writeTodo.id}</div>
           <Link
             to="/"
             style={{
